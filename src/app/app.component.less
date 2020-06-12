@@ -1,0 +1,54 @@
+@app-prefix-cls: ~'app';
+
+.@{app-prefix-cls} {
+    &-map-view {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    &-layers-view {
+        overflow: hidden;
+        overflow-y: auto;
+        position: fixed;
+        top: 5vh;
+        right: 5vh;
+        padding: 16px;
+        max-height: 90vh;
+        width: 420px;
+        border-radius: 4px;
+        box-shadow: 0 0 24px rgba(0, 0, 0, .15);
+        background-color: #fff;
+    }
+
+    &-buttons-view {
+        position: absolute;
+        left: 24px;
+        bottom: 24px;
+
+        & > button {
+            display: block;
+            width: 42px;
+            height: 42px;
+            border-radius: 100%;
+            border: 0;
+            box-shadow: 0 0 16px rgba(0, 0, 0, .15);
+            font-size: 20px;
+            text-align: center;
+            line-height: 42px;
+            color: #595959;
+            background-color: #fff;
+            transition: all .3s;
+            outline: none;
+            cursor: pointer;
+
+            &:not(:last-child) {
+                margin-bottom: 16px;
+            }
+
+            &:hover {
+                color: #fff;
+                background-color: #1890ff;
+            }
+        }
+    }
+}

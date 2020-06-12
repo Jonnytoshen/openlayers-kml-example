@@ -1,0 +1,16 @@
+<div class="app-map-view"></div>
+<ng-container *ngIf="layers.length > 0">
+    <app-layers-view class="app-layers-view" 
+    [layers]="layers" 
+    (onClickSnippet)="showLayerStyle($event)"
+    (onClickExport)="exportLayer($event)"
+    (onClickDelete)="removeLayer($event)"></app-layers-view>
+</ng-container>
+<div class="app-buttons-view">
+    <button (click)="flyToDataLayer()">
+        <i nz-icon nzType="aim" nzTheme="outline"></i>
+    </button>
+    <button (click)="exportLayer(dataLayer)">
+        <i nz-icon nzType="cloud-download" nzTheme="outline"></i>
+    </button>
+</div>

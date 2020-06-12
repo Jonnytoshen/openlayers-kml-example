@@ -1,0 +1,14 @@
+<ng-container *ngFor="let layer of layers">
+    <div class="layers-view-item">
+        <span class="layers-view-title">{{ layer.get('name') }}</span>
+        <span class="layers-view-button" (click)="onClickSnippet.emit(layer)">
+            <i nz-icon nzType="snippets" nzTheme="outline"></i>
+        </span>
+        <span class="layers-view-button" (click)="onClickExport.emit(layer)">
+            <i nz-icon nzType="export" nzTheme="outline"></i>
+        </span>
+        <span class="layers-view-button" (click)="onClickDelete.emit(layer)">
+            <i nz-icon nzType="delete" nzTheme="outline"></i>
+        </span>
+    </div>
+</ng-container>
